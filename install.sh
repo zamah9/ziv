@@ -95,7 +95,7 @@ run_silent "Generating SSL" "openssl req -new -newkey rsa:4096 -days 365 -nodes 
 
 # Find a free API port
 print_task "Finding available API Port"
-API_PORT=8081
+API_PORT=8080
 while netstat -tuln | grep -q ":$API_PORT "; do
     ((API_PORT++))
 done
